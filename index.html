@@ -1,0 +1,16 @@
+<html>
+<head>
+  <script>
+    function popup() {
+      var no=prompt()
+      if(no!=null) {
+        window.location.href="https://wa.me/+91"+no
+      } else {
+        alert("Please Enter a valid Number");
+        popup();
+      }
+    }
+  </script>
+<body onload="popup()">
+</body>
+</html>
