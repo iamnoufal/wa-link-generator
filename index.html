@@ -27,11 +27,26 @@
       padding: 0.5vw;
       font-size: 2vw;
     }
+    h2 {
+      padding:25vh 0;
+      text-align:center;
+      color:white;
+      border:4px solid white;
+      font-size:8vh;
+      font-family: "Festive", cursive
+    }
     @media screen and (max-width:700px) {
+      body {
+        background-image: linear-gradient(green, lightgreen, white);
+      }
       .main {
         flex-flow: column;
         height: auto;
       }
+      h2 {
+        padding: 0;
+      }
+    }
   </style>
   <script>
     function popup() {
@@ -48,14 +63,14 @@
 <body>
   <div class='main'>
     <div>
-      <h2 style='padding:25vh 0;text-align:center;color:white;border:4px solid white;font-size:8vh;font-family: "Festive", cursive'>Whatsapp link generator</h2>
+      <h2 style=''>Whatsapp link generator</h2>
     </div>
     <div style='padding:10vw 5vw;'>
       <form action='https://wa.me/+91'+no.value>
         <h3>Enter the Whatsaap number</h3>
         <input id='no' type='tel' pattern='[0-9]{10}' required />
         <h3>Enter messege (optional)</h3>
-        <input id='msg' type='text'/><br><br><br>
+        <input id='msg' type='text'/><br><br>
         <input type='submit' value='Go to chat' style='font-family:"Kalam"'>
       </form>
   </div>
