@@ -58,24 +58,22 @@
     }
   </style>
   <script>
-    function popup() {
-      var no=prompt()
+    function check() {
+      var no=localStorage.getItem("wano");
+      localStorage.clear()
       if(no!=null) {
-        window.location.href="https://wa.me/+91"+no
-      } else {
-        alert("Please Enter a valid Number");
-        popup();
+        window.location.href="https://wa.me/+91"+no;
       }
     }
   </script>
 </head>
-<body>
+<body onload='check()>
   <div class='main'>
     <div>
       <h2 style=''>Whatsapp link generator</h2>
     </div>
     <div style='padding:10vw 5vw;'>
-      <form onsubmit='window.location.href="https://wa.me/+91"+no.value'>
+      <form onsubmit='localStorage.setItme("wano",no.value'>
         <h3>Enter the Whatsaap number</h3>
         <input id='no' type='tel' pattern='[0-9]{10}' required />
         <h3>Enter messege (optional)</h3>
