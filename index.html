@@ -22,7 +22,9 @@
     }
     input {
       width: 100%;
-      backgrount-image: linear-gradient(to right, white, lightgreen);
+      background-image: linear-gradient(to right, white, lightgreen);
+      padding: 0.5vw;
+      font-size: 2vw;
     }
   </style>
   <script>
@@ -40,9 +42,9 @@
 <body>
   <div class='main'>
     <div>
-      <h2 style='padding:25vh 0;text-align:center;font-size:8vh;font-family: "Festive", cursive'>Whatsapp link generator</h2>
+      <h2 style='padding:25vh 0;text-align:center;border:4px solid white;font-size:8vh;font-family: "Festive", cursive'>Whatsapp link generator</h2>
     </div>
-    <div style='padding:10ve 5vw;'>
+    <div style='padding:10vw 5vw;'>
       <form action='https://wa.me/+91'+no.value>
         <h3>Enter the Whatsaap number</h3>
         <input id='no' type='tel' pattern='[0-9]{10}' required />
