@@ -38,10 +38,19 @@
     @media screen and (max-width:700px) {
       body {
         background-image: linear-gradient(green, lightgreen, white);
+        height: 100vh;
+        font-size: 6vw;
       }
       .main {
         flex-flow: column;
         height: auto;
+      }
+      .main > div {
+        width: 100%;
+      }
+      input {
+        font-size: 5vw;
+        padding: 1vw;
       }
       h2 {
         padding: 0;
