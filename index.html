@@ -76,12 +76,12 @@
       <h2 style=''>Whatsapp link generator</h2>
     </div>
     <div style='padding:8vw 5vw;'>
-      <form onsubmit='localStorage.setItem("wano",no.value)'>
+      <form>
         <h3>Enter the Whatsaap number</h3>
         <input id='no' type='tel' pattern='[0-9]{10}' required />
         <h3>Enter messege (optional)</h3>
         <input id='msg' type='text'/><br><br>
-        <input type='submit' value='Go to chat' style='font-family:"Kalam"'>
+        <input type='submit' value='Go to chat' style='font-family:"Kalam"' onclick='submit()'>
       </form>
   </div>
 </body>
