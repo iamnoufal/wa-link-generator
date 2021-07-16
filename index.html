@@ -60,9 +60,9 @@
   <script>
     function check() {
       var no=localStorage.getItem("wano");
-      localStorage.clear()
       if(no!=null) {
         window.location.href="https://wa.me/+91"+no;
+        localStorage.clear()
       }
     }
     function push() {
@@ -78,10 +78,10 @@
     <div style='padding:8vw 5vw;'>
       <form>
         <h3>Enter the Whatsaap number</h3>
-        <input id='no' type='tel' pattern='[0-9]{10}' onchange='push()' required />
+        <input id='no' type='tel' pattern='[0-9]{10}' required />
         <h3>Enter messege (optional)</h3>
         <input id='msg' type='text'/><br><br>
-        <input type='submit' value='Go to chat' style='font-family:"Kalam"' onclick='check()'>
+        <input type='submit' value='Go to chat' style='font-family:"Kalam"' onclick='push()'>
       </form>
   </div>
 </body>
