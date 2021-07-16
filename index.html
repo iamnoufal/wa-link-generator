@@ -35,7 +35,7 @@
       font-size:8vh;
       font-family: "Festive", cursive
     }
-    @media screen and (max-width:800px) {
+    @media screen and (max-width:1000px) {
       body {
         background-image: linear-gradient(green, lightgreen, white);
         height: 100vh;
@@ -65,6 +65,9 @@
         window.location.href="https://wa.me/+91"+no;
       }
     }
+    function submit() {
+      localStorage.setItem('wano',document.getElementById('no').value);
+    }
   </script>
 </head>
 <body onload='check()'>
@@ -73,7 +76,7 @@
       <h2 style=''>Whatsapp link generator</h2>
     </div>
     <div style='padding:10vw 5vw;'>
-      <form onsubmit='localStorage.setItme("wano",no.value'>
+      <form onsubmit='localStorage.setItem("wano",no.value'>
         <h3>Enter the Whatsaap number</h3>
         <input id='no' type='tel' pattern='[0-9]{10}' required />
         <h3>Enter messege (optional)</h3>
