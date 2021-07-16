@@ -1,0 +1,20 @@
+{
+  "short_name": "Whatsapp Link",
+  "name": "Whatsapp Link Generator",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://rahman24.github.io/wa-link-generator/",
+  "background_image": "linear-gradient(green,lightgreen,white)",
+  "display": "standalone",
+  "theme_color": "green"
+}
