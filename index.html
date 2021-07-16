@@ -1,5 +1,6 @@
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Festive&family=Kalam&display=swap');
     body {
@@ -68,6 +69,21 @@
     function push() {
       localStorage.setItem('wano',document.getElementById('no').value);
     }
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+
+    var deferredPrompt;
+    function a2hs(){
+      btnAdd.style.display="none",deferredPrompt.prompt(),deferredPrompt.userChoice.then(e=>{"accepted"===e.outcome?console.log("User accepted the A2HS prompt"):console.log("User dismissed the A2HS prompt"),deferredPrompt=null})
+    }
+    window.addEventListener("beforeinstallprompt",e=>{console.log("beforeinstallprompt"),e.preventDefault(),deferredPrompt=e,btnAdd.style.display="block"}),window.addEventListener("appinstalled",e=>{console.log("a2hs","installed")});
   </script>
 </head>
 <body onload='check()'>
@@ -83,6 +99,8 @@
         <input id='msg' type='text'/><br><br>
         <input type='submit' value='Go to chat' style='font-family:"Kalam"' onclick='push()'>
       </form>
+    </div>
   </div>
+  <div id='btnAdd' style='position:fixed;right:3vw;bottom:3vw;width:auto;padding:1vw;border-radius:100px;background-color:green;display:none'><i class='material-icons'>get_app</i></div>
 </body>
 </html>
